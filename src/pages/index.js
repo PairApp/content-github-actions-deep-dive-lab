@@ -13,7 +13,6 @@ const IndexPage = () => {
       </header>
       
       <main className='main'>
-        
 
           <h1 className='title'>
             Welcome to{' '}
@@ -22,7 +21,7 @@ const IndexPage = () => {
       
 
           <p className='description'>
-            Join Our Mailing List!
+            Join The Mailing List!
             <br/>
             <input type="text"></input>
             <br/>
