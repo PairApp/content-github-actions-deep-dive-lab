@@ -1,48 +1,63 @@
-import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-import "../styles/global.css"
+import React, { Component } from "react";
+import AboutModal from "../Components/AboutModal";
+import './index.css'
 
-import Layout from '../components/layout'
+class IndexPage extends Component {
+  state = {
+    modal: false,
+  };
 
-const IndexPage = () => {
-  return (
-    <Layout>
-      <header>
-        <title>Cloud Coffee</title>
-        <meta name="description" content="Bringing Coffee to the Cloud" />
-      </header>
-      
-      <main className='main'>
+  selectModal = (info) => {
+    this.setState({ modal: !this.state.modal }); // true/false toggle
+  };
 
-          <h1 className='title'>
-            Welcome to{' '}
-            <code className='title_code'>Cloud Coffee</code>
+  render() {
+    return (
+      <div className="landing">
+        <div className="videoContainer">
+          <div className="overlay"></div>
+          <div>
+            <button onClick={this.selectModal}>about</button>
+           
+          </div>
+          
+          <div className="login">
+            {/* <Login
+              postUser={this.props.postUser}
+              setCurrentUser={this.props.setCurrentUser}
+              users={this.props.users}
+            /> */}
+          </div>
+          
+          <h1 className="title">
+            Welcome 
           </h1>
-      
 
-          <p className='description'>
-            Join The Mailing List!
-            <br/>
+          <p className="description">
+            Join The Waiting List!
+            <br />
             <input type="text"></input>
-            <br/>
-            <button>Submit</button>
+            <br />
+            <button style={{backgroundColor: 'grey'}}>Submit</button>
           </p>
-
-          <footer className='footer'>
-            <a
-              href="https://acloud.guru"
-            >
-              Powered by{' '}
-              <span className='logo'>
-                <StaticImage src="../images/ACG_Orange_Logo_Horizontal.png" alt="A Cloud Guru logo" width={119} height={16} />
-              </span>
-            </a>
-          </footer>
-      </main>
-
-      
-    </Layout>
-  )
+          <div className="about">
+  
+            <AboutModal
+              displayModal={this.state.modal}
+              closeModal={this.selectModal}
+            />
+          </div>
+          
+          <div className="logo">
+            {/* <center><img src='http://cdn.shopify.com/s/files/1/0484/9460/8550/files/Pairup_logo2_1200x1200.png?v=1605598534' alt="logo" /></center> */}
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default IndexPage
+export default IndexPage;
+
+
+
