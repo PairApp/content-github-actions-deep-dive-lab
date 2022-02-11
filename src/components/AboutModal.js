@@ -1,5 +1,4 @@
 import React from 'react';
-import vlogo from '../images/vlogo_s_100.png'
 const Modal = props => {
 
     const divStyle = {

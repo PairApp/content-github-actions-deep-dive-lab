@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import AboutModal from "../Components/AboutModal";
+import AboutModal from "../components/AboutModal";
 import './index.css'
 
 class IndexPage extends Component {
