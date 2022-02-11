@@ -8,7 +8,7 @@ class IndexPage extends Component {
   };
 
   selectModal = (info) => {
-    this.setState({ modal: !this.state.modal }); // true/false toggle
+    this.setState({ modal: !this.state.modal }); // true/false
   };
 
   render() {

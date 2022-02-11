@@ -1,4 +1,5 @@
 import React from 'react';
+
 const Modal = props => {
 
     const divStyle = {
@@ -20,7 +21,7 @@ const Modal = props => {
                     className="close"
                     onClick={closeModal}>&otimes;
              </span>
-                <img src="http://cdn.shopify.com/s/files/1/0484/9460/8550/files/Pairup_logo2_1200x1200.png?v=1605598534" alt='viness logo' style={{ height: '65px'}} /> <br /><br /><br />
+                <img src="http://cdn.shopify.com/s/files/1/0484/9460/8550/files/Pairup_logo2_1200x1200.png?v=1605598534" alt='logo' style={{ height: '65px'}} /> <br /><br /><br />
                 <p>PairApp offers class recommendations and partner pairings for your chosen songs, as well as social dances. </p> <p>
                 We pair people based on your favorite chosen songs. Save classes to your profile, and see reviews and comments from other PairApp users.</p>
                  {/* <br />
